@@ -29,9 +29,12 @@ Utility/convenience functions are defined in functions.R
 
 \section{Graphical Themes}{
 
-Frequently used graphical objects and functions are defined in graphics.R.
-While the focus of this file is on ggplot2 and Shiny, functions for other
-plotting packages should be added here as well.
+This section is where your common idioms for programming graphics belong.
+Since R has a number of different packages, there's a separate file for each
+one.  Only ggplot is populated.
+}
+
+\section{\emph{graphics-ggplot.R}}{
 
 The ggplot2 package is somewhat unique from other packages with heavy use of
 the "+" continuation operator and the huge number of objects and functions

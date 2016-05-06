@@ -6,6 +6,10 @@
 \usage{
 env(package = NULL)
 }
+\arguments{
+\item{package}{a character vector naming installed packages, or \code{NULL}
+   (the default) meaning all attached packages.}
+}
 \description{
 env bash alias for \code{\link[utils]{sessionInfo}}
 }

@@ -6,6 +6,9 @@
 \usage{
 cd(dir)
 }
+\arguments{
+\item{dir}{A character string: \link{tilde expansion} will be done.}
+}
 \description{
 cd bash alias for \code{\link[base]{setwd}}
 }

@@ -1,12 +1,12 @@
 Package: dgutil
 Type: Package
 Title: Aliases and Utility Functions Used Across Projects
-Version: 2016.05.04
+Version: 2016.05.06
 Authors@R: person("David", "Gabbe'", email = "dgabbe@acm.org",
   role = c("aut", "cre"))
 Description: See readme.MD (for now).
 Depends: R (>= 3.2.4),
-    ggplot2
+    ggplot2 (>= 2.0)
 License: MIT+ file LICENSE
 URL: https://github.com/dgabbe/dgutil
 LazyData: TRUE

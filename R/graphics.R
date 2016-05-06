@@ -1,4 +1,5 @@
 #' theme_dg Modified theme_bw for a simple, colored version of the theme.
+#' @import ggplot2
 #' @export
 theme_dg <- theme_bw() +
   theme(panel.grid.minor = element_line(colour="#666666", linetype="dotted", size=0.25),

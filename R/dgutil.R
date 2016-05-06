@@ -1,45 +1,36 @@
-#
-# rconfig.r is the file that does the bulk of the work for customizating your R
-# session.  The reason for a more complex setup is to:
-#   a) Allow for the global environment to be cleared, but still retain the
-#      customizations.  I prefer this over hidden environments.
-#   b) R session initialization happens during other commands such as
-#      devtools::document(). Multiple executions of Rprofile.site should result
-#      in a session that is identical as the first instatiation.
-# This is similar to the issues around the bash rc files.
-#
-
-session_init_counter <- 0
-
-#   defaultPackages = c(
-#     getOption("defaultPackages"),
-#     "ggplot2",
-#     "RColorBrewer",
-#     "reshape2",
-#     "scales"
-#   )
-
-# My fingers are used to typing bash commands so create some equivalents
-cd <- setwd
-pwd <- getwd
-env <- utils::sessionInfo # I always forget sessionInfo
-
-#' Title
+#' dgutil: A package of functions used across projects.
 #'
-#' @param text
+#' The dgutil package provides three categories of R objects: aliases,
+#' functions, and graphical themes.
 #'
-#' @return The character string returned by timestamp().
+#' These functions are used across projects and benefit from online documentation.
+#' They will improve efficiency and R workflow.
 #'
-#' @examples
-#' note()
-#' note("Previous command worked")
+#' In particular, my experience is that package management works better if the
+#' required packages are specified in each .R file, similar to python's import
+#' statement.
 #'
-#' @export
-note <- function (text = "Previous command worked"){
-  timestamp(prefix = "<<<<< Notes to myself >>>>>\n",
-            stamp=paste(format(Sys.time(), "%d-%b-%Y (%a) %R @"), getwd(), "\n", text, sep=" "),
-            suffix = "\n<<<<< Notes to myself >>>>>\n",
-            quiet = TRUE)
-}
+#' @section Aliases:
+#' Create some bash equivalents in aliases.R
+#'
+#' @section Functions:
+#' Utility/convenience functions are defined in functions.R
+#'
+#' @section Graphical Themes:
+#' Frequently used graphical objects and functions are defined in graphics.R.
+#' While the focus of this file is on ggplot2 and Shiny, functions for other
+#' plotting packages should be added here as well.
+#'
+#' The ggplot2 package is somewhat unique from other packages with heavy use of
+#' the "+" continuation operator and the huge number of objects and functions
+#' needed to generate a graph. Using the \code{Imports} directive and \code{::}
+#' notation made \code{theme_dg} nearly inscrutable. Just take a look at the
+#' gglot2 Namespace file,
+#' \url{https://github.com/hadley/ggplot2/blob/master/NAMESPACE}. So yes, that is
+#' why this package depends on ggplot2.
+#'
+#' @docType package
+#' @name dgutil
+NULL
 
 

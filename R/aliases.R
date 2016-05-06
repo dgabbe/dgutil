@@ -3,12 +3,12 @@
 #' cd bash alias for \code{\link[base]{setwd}}
 #'
 #' @export
-cd <- setwd
+cd <- base::setwd
 
 #' pwd bash alias for \code{\link[base]{getwd}}
 #'
 #' @export
-pwd <- getwd
+pwd <- base::getwd
 
 #' env bash alias for \code{\link[utils]{sessionInfo}}
 #'

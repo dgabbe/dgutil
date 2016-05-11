@@ -11,11 +11,29 @@ functions, and graphical themes.
 }
 \details{
 These functions are used across projects and benefit from online documentation.
-They will improve efficiency and R workflow.
+They will improve your efficiency and R workflow.
 
-In particular, my experience is that package management works better if the
-required packages are specified in each .R file, similar to python's import
-statement.
+After a year of using different mechanisms to establish a default set of packges
+when you start R, my conclusion is \code{option()} in \code{Rprofile.site} should
+not be used.  A base R environment consists of 7 packages in addition to
+\code{base}. The common idiom
+\code{option(defaultPackage = c(getOptions("defaultPackages"), "my-package",
+"your-package")} assumes that your R environment is only initialized once.
+That's what I thought until I started using the \code{devtools} package and
+discovered that your R session can be initialized by others.  Each initialization
+adds your packages to the R environment stack.
+
+Here are some better solutions:
+\enumerate{
+  \item At the top of each file, use \code{library()} to load and attach each package
+  the file needs.  This is similar to python's import statement.
+  \item After a package is installed, you can reference any function directly
+  with the \code{::} notation.
+  \item And if you are using lots of functions from a package, it might be
+  easier to attach the entire package.  In that case, make your code a package
+  and use the \code{@import} and \code{@export} directives to do this automatically
+  for you.
+}
 }
 \section{Aliases}{
 

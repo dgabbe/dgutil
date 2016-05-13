@@ -19,7 +19,7 @@ not be used.  A base R environment consists of 7 packages in addition to
 \code{base}. The common idiom
 \code{option(defaultPackage = c(getOptions("defaultPackages"), "my-package",
 "your-package")} assumes that your R environment is only initialized once.
-That's what I thought until I started using the \code{devtools} package and
+That's what I thought until I started using the \code{devtools} package in RStudio and
 discovered that your R session can be initialized by others.  Each initialization
 adds your packages to the R environment stack.
 

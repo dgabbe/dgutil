@@ -2,13 +2,13 @@ reinstall_packages <- function (pkgs = NA) {
     if (is.na(pkgs))
       pkgs <- c(
         "crayon",
-        c("dgutil", "github", "dgabbe/dgutil"),
+        "dgabbe/dgutil",
         "directlabels",
         "dplyr",
         "ggplot2",
         "knitr",
         "lubridate",
-        "plotrix,"
+        "plotrix",
         "RColorBrewer",
         "readr",
         "readxl",
@@ -23,27 +23,42 @@ reinstall_packages <- function (pkgs = NA) {
         "tidyr"
       )
 
-    # Install first so install_github is available.  Don't attach devtools!
+#    installed <- "Installed: "
+    print("Installed:")
+
+    # Install first so install_github() is available.  Don't attach devtools!
     tryCatch(
       {
         p = "devtools"
         find.package(p)
       },
       error = function(e) install.packages(p),
-      finally = cat("  ", p, " package installed\n")
+      finally = print(cat("\n  ", p))
     )
 
-    lapply(pkgs, p_install(p))
+    lapply(
+      pkgs,
+      function (p) {
+        if (length(p) == 1) {
+          if (grepl("/", p)) {
+            try(
+              {
+                devtools::install_github(p, quiet = TRUE)
+                cat("\n  ", p)
+              }
+            )
+          } else
+            tryCatch(
+              { find.package(p) },
+              error = function(e) {
+                install.packages(p)
+              },
+              finally = paste("\n  ", p)
+            )
+        } else {
+          paste("\n   Wrong arguments: ", p)
+        }
+      }
+    )
+#  print(installed)
 }
-
-p_install <- function (p) {
-  switch(length(p),
-         0 = cat("\n    Null string found, skipping"),
-         1 = install.packages(p),
-         2 = cat("\n   found 2 arguments, expected 1 or 3"),
-         3 = switch(p[2],
-                    "github" = devtools::install_github(p[3])
-                    )
-  )
-}
-

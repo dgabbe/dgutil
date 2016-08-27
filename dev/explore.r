@@ -10,8 +10,19 @@ typeof(f)
 mode(f)
 str(f)
 
+# what about print()?
+# look into class() some more
+#
 explr <- function(x) {
-  fs <- list(typeof, mode, str, summary, head)
-  lapply(fs, fs, x)
-
+  fs <- c(typeof, mode, class, str, summary, head)
+#  lapply(fs, fs, x)
+  o <- ""
+  for (f in fs) {
+    cat("processing\n")
+    cat(o, sep = "", quote(f), ": ")
+    cat(o, invisible(f(x)))
+    cat(o, "\n")
+#    print(f(x))
+  }
+  print(o)
 }

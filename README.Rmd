@@ -39,4 +39,4 @@ devtools::install_github("dgabbe/dgutil")
 ``` 
 
 If you like how the bash prompt displays your current working directory, try my
-[Rprofile.site](https://github.com/dgabbe/rprofile.site) to emulate this behavior.
+[wdprompt](https://github.com/dgabbe/wdprompt) package to emulate this behavior.

@@ -2,6 +2,7 @@
 
 export(cd)
 export(env)
+export(fl)
 export(note)
 export(pwd)
 export(theme_dg)

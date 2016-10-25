@@ -1,4 +1,4 @@
-#' dgutil: A package of functions used across projects.
+#' dgutil-package: A package of functions used across projects.
 #'
 #' The dgutil package provides three categories of R objects: aliases,
 #' functions, and graphical themes.

@@ -11,19 +11,18 @@ installed_pkgs <- c() # List of packages already installed
 error_pkgs <- c() # List of packages that were not installed for some reason
 new_pkgs <- c() # List of packages this function installed
 
-#' Title
+#' reinstall_packages installs your standard set of packages
 #'
 #' @param pkgs
 #'
 #' @return
 #' @export
 #'
-#' @examples
 reinstall_packages <- function (pkgs = NA) {
   if (is.na(pkgs))
     pkgs <- list(
       "crayon",
-      c("github", "dgabbe/dgutil"),
+      c("github", "dgabbe/dgutils"),
       "directlabels",
       "dplyr",
       "ggplot2",
@@ -58,12 +57,11 @@ reinstall_packages <- function (pkgs = NA) {
 }
 
 
-#' Title
+#' installer helper function that does the install
 #'
 #' @param p
 #'
 #' @return
-#' @export
 #'
 #' @examples
 installer <- function(p) {

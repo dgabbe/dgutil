@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "README-"
 )
 ```
-### dgutil
+### dgutils
 My utility functions package, complete with documentation.  There are
  aliases for these bash commands: `cd`, `pwd`, and `env`.
 
@@ -35,7 +35,7 @@ Install with this R code:
 
 ```{r, eval=FALSE}
 install.packages("devtools")
-devtools::install_github("dgabbe/dgutil")
+devtools::install_github("dgabbe/dgutils")
 ``` 
 
 If you like how the bash prompt displays your current working directory, try my

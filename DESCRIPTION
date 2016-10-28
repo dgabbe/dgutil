@@ -1,4 +1,4 @@
-Package: dgutil
+Package: dgutils
 Type: Package
 Title: Aliases and Utility Functions Used Across Projects
 Version: 2016.10.14

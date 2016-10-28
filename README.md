@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-### dgutil
+### dgutils
 
 My utility functions package, complete with documentation. There are aliases for these bash commands: `cd`, `pwd`, and `env`.
 
@@ -23,7 +23,7 @@ Install with this R code:
 
 ``` r
 install.packages("devtools")
-devtools::install_github("dgabbe/dgutil")
+devtools::install_github("dgabbe/dgutils")
 ```
 
-If you like how the bash prompt displays your current working directory, try my [Rprofile.site](https://github.com/dgabbe/rprofile.site) to emulate this behavior.
+If you like how the bash prompt displays your current working directory, try my [wdprompt](https://github.com/dgabbe/wdprompt) package to emulate this behavior.

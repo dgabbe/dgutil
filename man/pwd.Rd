@@ -2,11 +2,13 @@
 % Please edit documentation in R/aliases.R
 \name{pwd}
 \alias{pwd}
-\title{pwd bash alias for \code{\link[base]{getwd}}}
+\title{pwd bash alias for \code{\link[base]{getwd}}
+ @inheritParams base::getwd}
 \usage{
 pwd()
 }
 \description{
 pwd bash alias for \code{\link[base]{getwd}}
+ @inheritParams base::getwd
 }
 

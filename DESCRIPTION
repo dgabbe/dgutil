@@ -1,6 +1,6 @@
 Package: dgutils
 Type: Package
-Title: Aliases and Utility Functions Used Across Projects
+Title: Interactive and Analysis Script Utility Functions
 Version: 2016.05.06
 Authors@R: person("David", "Gabbe'", email = "dgabbe@acm.org",
   role = c("aut", "cre"))

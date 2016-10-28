@@ -1,38 +1,12 @@
-#' dgutils: A package of functions used across projects.
+#' dgutils: Interactive and analysis script utility functions.
 #'
-#' The dgutils package provides three categories of R objects: aliases,
-#' functions, and graphical themes.
-#'
-#' These functions are used across projects and benefit from online documentation.
-#' They will improve your efficiency and R workflow.
-#'
-#' After a year of using different mechanisms to establish a default set of packges
-#' when you start R, my conclusion is \code{option()} in \code{Rprofile.site} should
-#' not be used.  A base R environment consists of 7 packages in addition to
-#' \code{base}. The common idiom
-#' \code{option(defaultPackage = c(getOptions("defaultPackages"), "my-package",
-#' "your-package")} assumes that your R environment is only initialized once.
-#' That's what I thought until I started using the \code{devtools} package and
-#' discovered that your R session can be initialized by others.  Each initialization
-#' adds your packages to the R environment stack.
-#'
-#' Here are some better solutions:
-#' \enumerate{
-#'   \item At the top of each file, use \code{library()} to load and attach each package
-#'   the file needs.  This is similar to python's import statement.
-#'   \item After a package is installed, you can reference any function directly
-#'   with the \code{::} notation.
-#'   \item And if you are using lots of functions from a package, it might be
-#'   easier to attach the entire package.  In that case, make your code a package
-#'   and use the \code{@import} and \code{@export} directives to do this automatically
-#'   for you.
-#' }
+#' A collection of aliases, functions, and themes to improve your efficiency and R workflow.
 #'
 #' @section Aliases:
 #' Create some bash equivalents in aliases.R
 #'
 #' @section Functions:
-#' Utility/convenience functions are defined in functions.R
+#' Utility/convenience functions are defined in separate files.
 #'
 #' @section Graphical Themes:
 #' This section is where your common idioms for programming graphics belong.
@@ -47,6 +21,38 @@
 #' gglot2 Namespace file,
 #' \url{https://github.com/hadley/ggplot2/blob/master/NAMESPACE}. So yes, that is
 #' why this package depends on ggplot2.
+#'
+#' @section Companion Projects:
+#' A companion package, \href{https://github.com/dgabbe/wdprompt}{wdprompt},
+#' changes the console's prompt to follow your working directory, similar to
+#' bash's behavior.  Review \href{https://github.com/dgabbe/rprofile.site}{rprofile.site}
+#' to see how I customized R.
+#'
+#' @section Customize with \code{.First()} and Packages:
+#' After a year of experimenting with different ways to customize my R environment,
+#' I think using  \code{.First()} and packages simplifies the process and provides better
+#' portablility/sharing and encapsulation.
+#'
+#' A base R environment consists of 7 packages in addition to
+#' \code{base}. The common idiom
+#' \code{option(defaultPackage = c(getOptions("defaultPackages"), "my-package",
+#' "your-package")} assumes that your R environment is only initialized once.
+#' That's what I thought until I started using the \code{devtools} package and
+#' discovered many of the functions call R initialization code.  Thus each pass
+#' will append \code{"your-package"} to the \code{defaultPacakges} list. While
+#' R is smart enough to only attach packages once, it's still sloppy code.
+#'
+#' Consider this alternative method to write analysis scripts.  Each script
+#' starts a \code{library()} section.  This is similar to python's \code{import}
+#' statement.  If you also write Python code, it makes easier to switch back &
+#' forth between the languages.
+#'
+#' For your own aliases and helper functions, create a package for them.  You
+#' can share your package easily via the \code{devtools::install_*} variants.
+#' There are some other advantages as well.  Having your own namespace avoids
+#' collisions with other packages.  Your customizations persist when the Global
+#' Environment is cleared.  RStudio makes it simple to develop a package and for
+#' personal use, you can decide how much you want to document.
 #'
 #' @docType package
 #' @name dgutils

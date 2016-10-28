@@ -1,12 +1,3 @@
-# tryCatch(
-#   {
-#     find.package(p, quiet = TRUE)
-#   },
-#   error = function(e) install.packages(p, quiet = TRUE),
-#   finally = print(cat("\n  ", p))
-# )
-#
-
 installed_pkgs <- c() # List of packages already installed
 error_pkgs <- c() # List of packages that were not installed for some reason
 new_pkgs <- c() # List of packages this function installed

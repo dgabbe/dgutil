@@ -1,6 +1,6 @@
-#' dgutil-package: A package of functions used across projects.
+#' dgutils-package: A package of functions used across projects.
 #'
-#' The dgutil package provides three categories of R objects: aliases,
+#' The dgutils package provides three categories of R objects: aliases,
 #' functions, and graphical themes.
 #'
 #' These functions are used across projects and benefit from online documentation.
@@ -49,7 +49,7 @@
 #' why this package depends on ggplot2.
 #'
 #' @docType package
-#' @name dgutil
+#' @name dgutils
 NULL
 
 

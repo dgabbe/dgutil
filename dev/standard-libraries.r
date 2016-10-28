@@ -17,7 +17,7 @@ reinstall_packages <- function (pkgs = NA, quiet = TRUE) {
     if (is.na(pkgs))
       pkgs <- c(
         "crayon",
-        "dgabbe/dgutil",
+        "dgabbe/dgutils",
         "directlabels",
         "dplyr",
         "ggplot2",
@@ -34,6 +34,7 @@ reinstall_packages <- function (pkgs = NA, quiet = TRUE) {
         "rversions",
         "scales",
         "shiny",
+        "shinythemes",
         "stringr",
         "tidyr"
       )

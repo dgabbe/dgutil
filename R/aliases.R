@@ -7,6 +7,7 @@
 cd <- base::setwd
 
 #' pwd bash alias for \code{\link[base]{getwd}}
+#' @inheritParams base::getwd
 #'
 #' @export
 pwd <- base::getwd

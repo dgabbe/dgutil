@@ -131,7 +131,7 @@ installer <- function(p) {
     return(FALSE)
   }
 
-        if (length(p) == 1) {
+  if (length(p) == 1) {
     if (length(find.package(p, quiet = TRUE)) != 0) {
       assign("installed_pkgs", append(installed_pkgs, p), inherits = TRUE)
       return(list("installed" = p))
@@ -155,15 +155,15 @@ installer <- function(p) {
       assign("installed_pkgs", append(installed_pkgs, repo), inherits = TRUE)
       return(list("installed" = p))
     } else {
-            try(
-              {
+      try(
+        {
           eval(parse(text = paste(cmd, "(\"", toString(repo), "\", quiet = TRUE)", sep = "")))
           message(repo, " installed with ", cmd)
-              },
+        },
         silent = TRUE
-            )
-        }
-      }
+      )
+    }
+  }
 
   if (length(p) > 2) {
     warning("Too many arguments:  ", toString(p))

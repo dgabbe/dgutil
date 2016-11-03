@@ -2,8 +2,6 @@
 output: github_document
 ---
 
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
 ```{r, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -35,8 +33,16 @@ Install with this R code:
 
 ```{r, eval=FALSE}
 install.packages("devtools")
+<<<<<<< HEAD
 devtools::install_github("dgabbe/dgutils")
 ```
+||||||| merged common ancestors
+devtools::install_github("dgabbe/dgutil")
+``` 
+=======
+devtools::install_github("dgabbe/dgutils")
+``` 
+>>>>>>> dev
 
 If you like how the bash prompt displays your current working directory, try my
 [wdprompt](https://github.com/dgabbe/wdprompt) package to emulate this behavior.

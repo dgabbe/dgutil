@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <<<<<<< .merge_file_TG5eS2
 #' Reinstall my standard collection of packages to first library listed in \code{.libPaths}.
 #'
@@ -50,10 +51,23 @@ reinstall_packages <- function (pkgs = NA, quiet = TRUE) {
 #
 >>>>>>> .merge_file_vhtDYj
 
+||||||| merged common ancestors
+# tryCatch(
+#   {
+#     find.package(p, quiet = TRUE)
+#   },
+#   error = function(e) install.packages(p, quiet = TRUE),
+#   finally = print(cat("\n  ", p))
+# )
+#
+
+=======
+>>>>>>> dev
 installed_pkgs <- c() # List of packages already installed
 error_pkgs <- c() # List of packages that were not installed for some reason
 new_pkgs <- c() # List of packages this function installed
 
+<<<<<<< HEAD
 <<<<<<< .merge_file_TG5eS2
     # Install first so install_github() is available.  Don't attach devtools!
     tryCatch(
@@ -65,18 +79,22 @@ new_pkgs <- c() # List of packages this function installed
       finally = print(cat("\n  ", p))
 =======
 #' Title
+||||||| merged common ancestors
+#' Title
+=======
+#' reinstall_packages installs your standard set of packages
+>>>>>>> dev
 #'
 #' @param pkgs
 #'
 #' @return
 #' @export
 #'
-#' @examples
 reinstall_packages <- function (pkgs = NA) {
   if (is.na(pkgs))
     pkgs <- list(
       "crayon",
-      c("github", "dgabbe/dgutil"),
+      c("github", "dgabbe/dgutils"),
       "directlabels",
       "dplyr",
       "ggplot2",
@@ -112,12 +130,11 @@ reinstall_packages <- function (pkgs = NA) {
 }
 
 
-#' Title
+#' installer helper function that does the install
 #'
 #' @param p
 #'
 #' @return
-#' @export
 #'
 #' @examples
 installer <- function(p) {

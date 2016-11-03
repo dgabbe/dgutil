@@ -1,16 +1,16 @@
 Package: dgutils
 Type: Package
-Title: Aliases and Utility Functions Used Across Projects
+Title: Interactive and Analysis Script Utility Functions
 Version: 2016.10.14
 Authors@R: person("David", "Gabbe'", email = "dgabbe@acm.org",
   role = c("aut", "cre"))
 Description: See readme.MD (for now).
-Depends: R (>= 3.2.4),
-    ggplot2 (>= 2.0)
+Depends: R (>= 3.2.4), ggplot2 (>= 2.0)
 License: MIT + file LICENSE
 URL: https://github.com/dgabbe/dgutils
 LazyData: TRUE
 RoxygenNote: 5.0.1
+NeedsCompilation: no
 Suggests: directlabels,
     RColorBrewer,
     scales,

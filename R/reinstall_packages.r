@@ -50,11 +50,14 @@ reinstall_packages <- function (pkgs = NA) {
 
 #' installer helper function that does the install
 #'
-#' @param p
+#' @param p character vector representing package name passed to `install.packages()`.
+#' If a list, the first element is the suffix to append to `devtools::install_`.
+#' The second element is the path to the path package.
 #'
-#' @return
+#' @section Limitations:
 #'
-#' @examples
+#' @return returns a named list if successful.  Otherwise FALSE.
+#'
 installer <- function(p) {
   if (is.null(p)) {
     warning("No package to install.")

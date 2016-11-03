@@ -1,4 +1,4 @@
-#' fl an indented, wrapped, neatly printed list styled after a definition
+#' An indented, wrapped, neatly printed list styled after a definition
 #'
 #' There are many formatting or pretty printing functions available,
 #' some of them quite elaborate.  Mine uses only functions in `base`.  It seems that many

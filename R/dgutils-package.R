@@ -1,10 +1,10 @@
-#' dgutils-package: A package of functions used across projects.
+#' dgutils-package: Interactive and Analysis Script Utility Functions.
 #'
 #' The dgutils package provides three categories of R objects: aliases,
 #' functions, and graphical themes.
 #'
-#' These functions are used across projects and benefit from online documentation.
-#' They will improve your efficiency and R workflow.
+#' These functions will improve your efficiency and R workflow
+#' and benefit from online documentation.
 #'
 #' After a year of using different mechanisms to establish a default set of packges
 #' when you start R, my conclusion is \code{option()} in \code{Rprofile.site} should

@@ -2,37 +2,73 @@ installed_pkgs <- c() # List of packages already installed
 error_pkgs <- c() # List of packages that were not installed for some reason
 new_pkgs <- c() # List of packages this function installed
 
-#' reinstall_packages installs your standard set of packages
+my_packages <- list(
+  "crayon",
+  c("github", "dgabbe/dgutils"),
+  "directlabels",
+  "dplyr",
+  "ggplot2",
+  "knitr",
+  "lubridate",
+  "plotrix",
+  "RColorBrewer",
+  "readr",
+  "readxl",
+  "reshape2",
+  "rmarkdown",
+  "roxygen2",
+  "rsconnect",
+  "rversions",
+  "scales",
+  "shiny",
+  "stringr",
+  "tidyr"
+)
+
+#' Installs your standard set of packages
 #'
-#' @param pkgs
+#' This function is part programming exercise and part solution to R upgrades.
+#' Only \code{\link{install.packages}() pkgs} param to  is supported.  For \code{devtools::install_*}
+#' functions, only the first parameter, usually repo, is supported.  If you need
+#' something more advanced, there are plenty of similar functions already written.
 #'
-#' @return
+#' Each R release has its own library, \code{/Library/Frameworks/R.framework/Versions/x.x/Resources/library}.
+#' To avoid populating the new R library, I added a library just for 3.x versions
+#' and this function to make managing multiple computers eaiser.
+#'
+#' @param pkgs a list of packages to install. Packages installed
+#' with \code{devtools::install_*} functions are specified as a character
+#' vector of 2 strings.  The first string is the suffix to complete the install
+#' funciton name.  The second string is the path to the package.  If this param
+#' is not specified, the set is defaulted to my_packages.
+#'
+#' @return TRUE
 #' @export
 #'
-reinstall_packages <- function (pkgs = NA) {
-  if (is.na(pkgs))
-    pkgs <- list(
-      "crayon",
-      c("github", "dgabbe/dgutils"),
-      "directlabels",
-      "dplyr",
-      "ggplot2",
-      "knitr",
-      "lubridate",
-      "plotrix",
-      "RColorBrewer",
-      "readr",
-      "readxl",
-      "reshape2",
-      "rmarkdown",
-      "roxygen2",
-      "rsconnect",
-      "rversions",
-      "scales",
-      "shiny",
-      "stringr",
-      "tidyr"
-    )
+reinstall_packages <- function (pkgs = my_packages) {
+  # if (is.na(pkgs))
+  #   pkgs <- list(
+  #     "crayon",
+  #     c("github", "dgabbe/dgutils"),
+  #     "directlabels",
+  #     "dplyr",
+  #     "ggplot2",
+  #     "knitr",
+  #     "lubridate",
+  #     "plotrix",
+  #     "RColorBrewer",
+  #     "readr",
+  #     "readxl",
+  #     "reshape2",
+  #     "rmarkdown",
+  #     "roxygen2",
+  #     "rsconnect",
+  #     "rversions",
+  #     "scales",
+  #     "shiny",
+  #     "stringr",
+  #     "tidyr"
+  #   )
 
   #
   # Install first so install_*()'s are available.  Don't attach devtools!
@@ -48,10 +84,10 @@ reinstall_packages <- function (pkgs = NA) {
 }
 
 
-#' installer helper function that does the install
+#' Helper function that invokes the proper install function
 #'
-#' @param p character vector representing package name passed to `install.packages()`.
-#' If a list, the first element is the suffix to append to `devtools::install_`.
+#' @param p character vector representing package name passed to \code{install.packages()}.
+#' If a list, the first element is the suffix to append to \code{devtools::install_}.
 #' The second element is the path to the path package.
 #'
 #' @section Limitations:

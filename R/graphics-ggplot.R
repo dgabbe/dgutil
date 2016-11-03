@@ -1,4 +1,4 @@
-#' theme_dg Modified theme_bw for a simple, colored version of the theme.
+#' Modified theme_bw for a simple, colored version of the theme.
 #' @import ggplot2
 #' @export
 theme_dg <- theme_bw() +

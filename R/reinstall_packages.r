@@ -10,6 +10,7 @@ my_packages <- list(
   "ggplot2",
   "knitr",
   "lubridate",
+  c("github", "hadley/pkgdown"),
   "plotrix",
   "RColorBrewer",
   "readr",

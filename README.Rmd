@@ -16,16 +16,11 @@ My utility functions package, complete with documentation.  There are
 The `note` function to record comments in the history file. Handy to record some
 thoughts immediately after the execution of some code.  Here's an example from
 my first time using [directlabels](http://directlabels.r-forge.r-project.org/):
-```{r, eval=FALSE}
+```{r note command, eval=FALSE}
 note("Plot labels have wrong color - try explicit aes() for geom_dl")
 ```
 added this to the history file:
-```
-<<<<< Notes to myself >>>>>
-12-May-2016 (Thu) 08:07 @ /Users/examples
-Plot labels have wrong color - try explicit aes() for geom_dl
-<<<<< Notes to myself >>>>>
-```
+
 
 `theme_dg` gathers up the standard changes I make to ggplot's `theme_bw`.
 

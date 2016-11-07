@@ -1,5 +1,8 @@
 ^.*\.Rproj$
 ^\.Rproj\.user$
-^untracked\.*
+^_untracked\.*
 ^README\.Rmd$
 ^README-.*\.png$
+^docs\.*
+^dev\.*
+^_pkgdown.yml

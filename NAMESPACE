@@ -3,6 +3,7 @@
 export(cd)
 export(env)
 export(fl)
+export(my_packages)
 export(note)
 export(pwd)
 export(reinstall_packages)

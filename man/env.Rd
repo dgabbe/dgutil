@@ -2,7 +2,7 @@
 % Please edit documentation in R/aliases.R
 \name{env}
 \alias{env}
-\title{env bash alias for \code{\link[utils]{sessionInfo}}}
+\title{bash alias for \code{\link[utils]{sessionInfo}}.}
 \usage{
 env(package = NULL)
 }
@@ -11,6 +11,6 @@ env(package = NULL)
    (the default) meaning all attached packages.}
 }
 \description{
-env bash alias for \code{\link[utils]{sessionInfo}}
+bash alias for \code{\link[utils]{sessionInfo}}.
 }
 

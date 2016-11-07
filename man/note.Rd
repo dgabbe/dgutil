@@ -2,22 +2,32 @@
 % Please edit documentation in R/note.R
 \name{note}
 \alias{note}
-\title{Note a comment in the history file for future reference.}
+\title{Add a comment in the history file.}
 \usage{
-note(text = "Previous command worked")
+note(txt = "Previous command worked")
 }
 \arguments{
-\item{text}{The default is \code{"Previous command worked"}.}
+\item{txt}{default is \code{"Previous command worked"}.}
 }
 \value{
 The character string returned by \code{\link[utils]{timestamp}}.
 }
 \description{
-Sometimes interactive exploration of running different R statements is a
+Sometimes interactive exploration of running different statements is a
 great way to understand what is happening with your code or data.
 \code{note} is a quick way to annote your results in the history file so you
 can record what worked or did not work or a question that needs further
 research.
+}
+\details{
+\code{note("Plot labels have wrong color - try explicit aes() for geom_dl")}
+would create a history file entry similar to:
+\preformatted{
+<<<<< Notes to myself >>>>>
+12-May-2016 (Thu) 08:07 @ /Users/examples
+Plot labels have wrong color - try explicit aes() for geom_dl
+<<<<< Notes to myself >>>>>
+}
 }
 \examples{
 note()

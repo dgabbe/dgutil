@@ -1,10 +1,10 @@
 Package: dgutils
 Title: Interactive and Analysis Script Utility Functions
-Version: 2016.11.05
-Authors@R: person("David", "Gabbe'", email = "dgabbe@acm.org", role = c("aut", "cre"))
+Version: 2016.11.09
+Encoding: UTF-8
+Authors@R: person("David", "Gabbé", email = "dgabbe@acm.org", role = c("aut", "cre"))
 Description: Collection of utilities.
 Depends: R (>= 3.2.4), ggplot2 (>= 2.0.2)
-Imports: utils, devtools
 License: MIT + file LICENSE
 URL: https://github.com/dgabbe/dgutils
 LazyData: TRUE

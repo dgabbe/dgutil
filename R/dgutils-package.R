@@ -29,6 +29,7 @@
 #'
 #' @docType package
 #' @name dgutils-package
+#' @importFrom utils sessionInfo timestamp
 NULL
 
 

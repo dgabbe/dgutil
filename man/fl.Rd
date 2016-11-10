@@ -2,31 +2,34 @@
 % Please edit documentation in R/fl.R
 \name{fl}
 \alias{fl}
-\title{fl an indented, wrapped, neatly printed list styled after a definition}
+\title{An indented, wrapped list styled after a definition.}
 \usage{
-fl(x, label = "", indent_string = sub(", ", " ",
-  toString(character(getOption("tab.width")))))
+fl(x, label = "", indent_string = NA)
 }
 \arguments{
-\item{x}{the R object to display. `toString` must be able to evaluate it.}
+\item{x}{the R object to display. \code{\link{toString}} must be able to evaluate it.}
 
 \item{label}{a string to describe the list.  The remaining lines are
-indented by the number of characters from catcatenating `indent_string` and
+indented by the number of characters from catcatenating \code{indent_string} and
 `label`.}
 
 \item{indent_string}{the string to prefix the first line.  Defaults to
-`tab.width` option number of spaces.  If you wanted your
+\code{tab.width} option number of spaces.  If you wanted your
 list indented 4 spaces, you pass a string of 4 spaces to this parameter.}
 }
 \description{
 There are many formatting or pretty printing functions available,
-some of them quite elaborate.  Mine uses only functions in `base`.  It seems that many
-programmers don't realize the power of `strwrap` and the `sep` parameter for `cat`.
+some of them quite elaborate.  Mine uses only functions in \code{base}.  It seems that many
+programmers don't realize the power of \code{strwrap} and the \code{sep} parameter for \code{\link{cat}}.
+}
+\section{R Trivia}{
+
+Turns out the \code{tab.width} option is not set by default in base R as
+I discovered when I tried to build the package.  Now explicitly test to see if the
+option is set.
 }
 \examples{
-\dontrun{
 fl(search(), label = "search():  ")
-}
 
 }
 

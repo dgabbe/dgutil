@@ -2,7 +2,7 @@
 % Please edit documentation in R/aliases.R
 \name{cd}
 \alias{cd}
-\title{cd bash alias for \code{\link[base]{setwd}}}
+\title{bash alias for \code{\link[base]{setwd}}.}
 \usage{
 cd(dir)
 }
@@ -10,6 +10,6 @@ cd(dir)
 \item{dir}{A character string: \link{tilde expansion} will be done.}
 }
 \description{
-cd bash alias for \code{\link[base]{setwd}}
+bash alias for \code{\link[base]{setwd}}.
 }
 

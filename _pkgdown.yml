@@ -1,0 +1,24 @@
+navbar:
+  left:
+  - text: Intro
+    href: reference/dgutils-package.html
+  - text: Reference
+    href: reference/index.html
+reference:
+  - title: "Aliases"
+    desc: "The bash aliases hard wired into my finger tips."
+    contents:
+      - cd
+      - pwd
+      - env
+  - title: "Utility Functions"
+    desc: "They help make life better."
+    contents:
+      - fl
+      - note
+      - reinstall_packages
+      - my_packages
+  - title: "Graphics - ggplot"
+    desc: "Helpful graphics functions"
+    contents:
+      - theme_dg

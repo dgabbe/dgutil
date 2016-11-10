@@ -2,11 +2,11 @@
 % Please edit documentation in R/aliases.R
 \name{pwd}
 \alias{pwd}
-\title{pwd bash alias for \code{\link[base]{getwd}}}
+\title{bash alias for \code{\link[base]{getwd}}.}
 \usage{
 pwd()
 }
 \description{
-pwd bash alias for \code{\link[base]{getwd}}
+bash alias for \code{\link[base]{getwd}}.
 }
 

@@ -3,13 +3,13 @@
 \docType{data}
 \name{theme_dg}
 \alias{theme_dg}
-\title{Gathers up the standard changes I make to \code{theme_bw} to add a bit of color.}
-\format{An object of class \code{theme} (inherits from \code{gg}) of length 44.}
+\title{Modifications to \code{theme_bw} to add a bit of color.}
+\format{An object of class \code{theme} (inherits from \code{gg}) of length 57.}
 \usage{
 theme_dg
 }
 \description{
-Gathers up the standard changes I make to \code{theme_bw} to add a bit of color.
+Modifications to \code{theme_bw} to add a bit of color.
 }
 \seealso{
 \code{\link[ggplot2]{ggtheme}}

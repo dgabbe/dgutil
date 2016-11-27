@@ -12,7 +12,7 @@
 #'
 #' @param indent_string the string to prefix the first line.  Defaults to
 #' \code{tab.width} option number of spaces.  If you wanted your
-#' list indented 4 spaces, you pass a string of 4 spaces to this parameter.
+#' list indented 4 spaces, pass a string of 4 spaces to this parameter.
 #'
 #' @section R Trivia:
 #' Turns out the \code{tab.width} option is not set by default in base R as

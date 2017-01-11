@@ -32,7 +32,7 @@ An indented, wrapped list styled after a definition.
 }
 \section{Functions}{
 \itemize{
-\item \code{flp}: Returns a string
+\item \code{flp}: formatted string variant
 }}
 \section{R Trivia}{
 
@@ -42,6 +42,8 @@ option is set.
 }
 \examples{
 fl(search(), label = "search():  ")
+
+s <- flp(search(), label = "search():  ")
 
 }
 

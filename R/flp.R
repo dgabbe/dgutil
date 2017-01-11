@@ -4,7 +4,10 @@
 #'
 #' @return a formatted string
 #'
-#' @describeIn fl Returns a string
+#' @describeIn fl formatted string variant
+#' @examples
+#' s <- flp(search(), label = "search():  ")
+#'
 #' @export
 #'
 flp <- function(x, label = "", indent_string = NA) {

@@ -81,9 +81,13 @@
     <p>There are many formatting or pretty printing functions available,
 some of them quite elaborate.  Mine uses only functions in <code>base</code>.  It seems that many
 programmers don&#39;t realize the power of <code>strwrap</code> and the <code>sep</code> parameter for <code>cat</code>.</p>
+
+    <p>An indented, wrapped list styled after a definition.</p>
     
 
-    <pre><span class='fu'>fl</span>(<span class='no'>x</span>, <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>indent_string</span> <span class='kw'>=</span> <span class='fl'>NA</span>)</pre>
+    <pre><span class='fu'>fl</span>(<span class='no'>x</span>, <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>indent_string</span> <span class='kw'>=</span> <span class='fl'>NA</span>)
+
+<span class='fu'>flp</span>(<span class='no'>x</span>, <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>""</span>, <span class='kw'>indent_string</span> <span class='kw'>=</span> <span class='fl'>NA</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <dl class="dl-horizontal">
@@ -96,8 +100,19 @@ indented by the number of characters from catcatenating <code>indent_string</cod
       <dt>indent_string</dt>
       <dd>the string to prefix the first line.  Defaults to
 <code>tab.width</code> option number of spaces.  If you wanted your
-list indented 4 spaces, you pass a string of 4 spaces to this parameter.</dd>
+list indented 4 spaces, pass a string of 4 spaces to this parameter.</dd>
     </dl>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>a formatted string</p>
+    
+    <h2 class="hasAnchor" id="functions"><a class="anchor" href="#functions"></a>Functions</h2>
+
+    <p><ul>
+<li> <code>flp</code>: formatted string variant
+</li>
+</ul></p>
     
     <h2 class="hasAnchor" id="r-trivia"><a class="anchor" href="#r-trivia"></a>R Trivia</h2>
 
@@ -112,13 +127,17 @@ option is set.</p>
 #&gt;              tools:rstudio, package:stats, package:graphics, package:grDevices,
 #&gt;              package:utils, package:datasets, package:ggplot2,
 #&gt;              package:devtools, package:methods, Autoloads, package:base</div><div class='input'>
-</div></pre>
+<span class='no'>s</span> <span class='kw'>&lt;-</span> <span class='fu'>flp</span>(<span class='fu'>search</span>(), <span class='kw'>label</span> <span class='kw'>=</span> <span class='st'>"search():  "</span>)</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
       <li><a href="#arguments">Arguments</a></li>
       
+      <li><a href="#value">Value</a></li>
+
+      <li><a href="#functions">Functions</a></li>
+
       <li><a href="#r-trivia">R Trivia</a></li>
       
       <li><a href="#examples">Examples</a></li>

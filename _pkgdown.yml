@@ -15,6 +15,7 @@ reference:
     desc: "They help make life better."
     contents:
       - fl
+      - flp
       - note
       - reinstall_packages
       - my_packages

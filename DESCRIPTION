@@ -8,9 +8,6 @@ Depends: R (>= 3.2.4), ggplot2 (>= 2.0.2)
 License: MIT + file LICENSE
 URL: https://github.com/dgabbe/dgutils
 LazyData: TRUE
-RoxygenNote: 5.0.1
 NeedsCompilation: no
-Suggests: directlabels,
-    RColorBrewer,
-    scales,
-    reshape2
+Suggests: directlabels, RColorBrewer, scales, reshape2
+RoxygenNote: 5.0.1

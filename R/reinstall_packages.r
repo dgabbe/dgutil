@@ -15,6 +15,7 @@ my_packages <- list(
   "lubridate",
   c("github", "hadley/pkgdown"),
   "plotrix",
+  "pryr",
   "RColorBrewer",
   "readr",
   "readxl",

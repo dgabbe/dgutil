@@ -7,7 +7,7 @@
 #' @export
 my_packages <- list(
   "crayon",
-  c("github", "dgabbe/dgutils"),
+  c("github", "dgabbe/dgutils@Current"),
   "directlabels",
   "dplyr",
   "ggplot2",

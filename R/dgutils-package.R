@@ -7,7 +7,7 @@
 #' Install this package:
 #' \preformatted{
 #' install.packages("devtools")
-#' devtools::install_github("dgabbe/dgutils")
+#' devtools::install_github("dgabbe/dgutils@Current")
 #' }
 #'
 #' @section Aliases:

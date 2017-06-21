@@ -18,15 +18,10 @@ default_packages <- list(
   "crayon",
   c("github", "dgabbe/dgutils"),
   "directlabels",
-  "dplyr",
-  "ggplot2",
   "knitr",
-  "lubridate",
   c("github", "hadley/pkgdown"),
   "plotrix",
   "RColorBrewer",
-  "readr",
-  "readxl",
   "reshape2",
   "rmarkdown",
   "roxygen2",
@@ -34,8 +29,7 @@ default_packages <- list(
   "rversions",
   "scales",
   "shiny",
-  "stringr",
-  "tidyr"
+  "tidyverse" # covers all the Hadley packages
 )
 
 #' Installs your standard set of packages.

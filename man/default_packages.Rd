@@ -4,7 +4,7 @@
 \name{default_packages}
 \alias{default_packages}
 \title{Default set of packages.}
-\format{An object of class \code{list} of length 15.}
+\format{An object of class \code{list} of length 17.}
 \usage{
 default_packages
 }

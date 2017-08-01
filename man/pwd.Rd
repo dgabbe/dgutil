@@ -9,4 +9,3 @@ pwd()
 \description{
 bash alias for \code{\link[base]{getwd}}.
 }
-

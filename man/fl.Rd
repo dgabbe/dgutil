@@ -34,16 +34,17 @@ An indented, wrapped list styled after a definition.
 \itemize{
 \item \code{flp}: formatted string variant
 }}
+
 \section{R Trivia}{
 
 Turns out the \code{tab.width} option is not set by default in base R as
 I discovered when I tried to build the package.  Now explicitly test to see if the
 option is set.
 }
+
 \examples{
 fl(search(), label = "search():  ")
 
 s <- flp(search(), label = "search():  ")
 
 }
-

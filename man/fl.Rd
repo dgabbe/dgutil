@@ -25,8 +25,9 @@ a formatted string
 }
 \description{
 There are many formatting or pretty printing functions available,
-some of them quite elaborate.  Mine uses only functions in \code{base}.  It seems that many
-programmers don't realize the power of \code{strwrap} and the \code{sep} parameter for \code{\link{cat}}.
+some of them quite elaborate.  Mine uses only functions in \code{base}.
+It seems that many programmers don't realize the power of \code{strwrap}
+and the \code{sep} parameter for \code{\link{cat}}.
 
 An indented, wrapped list styled after a definition.
 }

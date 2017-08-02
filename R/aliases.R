@@ -5,7 +5,6 @@
 #' @inheritParams base::setwd
 #'
 #' @export
-#'
 cd <- base::setwd
 
 #' bash alias for \code{\link[base]{getwd}}.
@@ -13,13 +12,11 @@ cd <- base::setwd
 #' @inheritParams base::getwd
 #'
 #' @export
-#'
 pwd <- base::getwd
 
 #' bash alias for \code{\link[utils]{sessionInfo}}.
 #'
 #' @inheritParams utils::sessionInfo
-#'
+#' @importFrom utils sessionInfo
 #' @export
-#'
 env <- utils::sessionInfo

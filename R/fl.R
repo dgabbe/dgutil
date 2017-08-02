@@ -1,12 +1,13 @@
 #' An indented, wrapped list styled after a definition.
 #'
 #' There are many formatting or pretty printing functions available,
-#' some of them quite elaborate.  Mine uses only functions in \code{base}.  It seems that many
-#' programmers don't realize the power of \code{strwrap} and the \code{sep} parameter for \code{\link{cat}}.
+#' some of them quite elaborate.  Mine uses only functions in \code{base}.
+#' It seems that many programmers don't realize the power of \code{strwrap}
+#' and the \code{sep} parameter for \code{\link{cat}}.
 #'
 #' @param x the R object to display. \code{\link{toString}} must be able to evaluate it.
 #'
-#' @param label  a string to describe the list.  The remaining lines are
+#' @param label a string to describe the list.  The remaining lines are
 #' indented by the number of characters from catcatenating \code{indent_string} and
 #' `label`.
 #'
@@ -23,7 +24,6 @@
 #' fl(search(), label = "search():  ")
 #'
 #' @export
-#'
 fl <- function(x, label = "", indent_string = NA) {
   if (is.na(indent_string)) {
     if (is.null(getOption("tab.width"))) {

@@ -23,12 +23,12 @@
 #' note()
 #' note("Calculation matched reference data!")
 #'
+#' @importFrom utils timestamp
 #' @export
-#'
 note <- function(txt = "Previous command worked") {
   utils::timestamp(
     prefix = "<<<<< Notes to myself >>>>>\n",
-    stamp=paste(format(Sys.time(), "%d-%b-%Y (%a) %R @"), getwd(), "\n", txt, sep=" "),
+    stamp = paste(format(Sys.time(), "%d-%b-%Y (%a) %R @"), getwd(), "\n", txt, sep = " "),
     suffix = "\n<<<<< Notes to myself >>>>>\n",
     quiet = TRUE
   )

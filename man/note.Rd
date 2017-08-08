@@ -34,4 +34,3 @@ note()
 note("Calculation matched reference data!")
 
 }
-

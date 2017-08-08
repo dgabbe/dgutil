@@ -21,5 +21,5 @@ Helper function that invokes the proper install function
 
 There are many params to the install functions that are not supported at this time.
 }
-\keyword{internal}
 
+\keyword{internal}

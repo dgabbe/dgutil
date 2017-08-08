@@ -9,7 +9,6 @@
 #' s <- flp(search(), label = "search():  ")
 #'
 #' @export
-#'
 flp <- function(x, label = "", indent_string = NA) {
   if (is.na(indent_string)) {
     if (is.null(getOption("tab.width"))) {

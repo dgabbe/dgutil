@@ -1,24 +1,27 @@
 #' Default set of packages.
 #'
 #' To see a tidy list of them, refer to Examples:
+#'
+#' @section Implementation Enhancements:
+#'
+#' Creating a package object has the disadvantage that updating the defaults necessiates
+#' a package release cycle.  A more flexible method would be to add an option to
+#' \code{.Options}.  In the mean time, writing a brief R script is an alternative
+#' solution.
+#'
 #' @examples
-#' dgutils::fl(my_packages)
+#' dgutils::fl(default_packages)
 #'
 #' @export
-my_packages <- list(
+default_packages <- list(
   "crayon",
   c("github", "dgabbe/dgutils@Current"),
   "directlabels",
-  "dplyr",
-  "ggplot2",
   "knitr",
-  "lubridate",
   c("github", "hadley/pkgdown"),
   "plotrix",
   "pryr",
   "RColorBrewer",
-  "readr",
-  "readxl",
   "reshape2",
   "rmarkdown",
   "roxygen2",
@@ -26,8 +29,7 @@ my_packages <- list(
   "rversions",
   "scales",
   "shiny",
-  "stringr",
-  "tidyr",
+  "tidyverse", # covers all the Hadley packages
   c("github", "dgabbe/wdprompt@Current"),
   "wesanderson"
 )
@@ -46,20 +48,18 @@ my_packages <- list(
 #' }
 #' and this function to make managing multiple computers eaiser.
 #'
-#'
 #' @param pkgs a list of packages to install. Packages installed
 #' with \code{devtools::install_*} functions are specified as a character
 #' vector of 2 strings.  The first string is the suffix to complete the install
 #' funciton name.  The second string is the path to the package.  If this param
-#' is not specified, the set is defaulted to \code{dgutils::my_packages}.
+#' is not specified, the set is defaulted to \code{dgutils::default_packages}.
 #'
 #' @return TRUE
 #'
 #' @section Future Development:
-#' It's possible that \code{my_packages} will become an option.
+#' It's possible that \code{default_packages} will become an option.
 #' @export
-#'
-reinstall_packages <- function (pkgs = my_packages) {
+reinstall_packages <- function (pkgs = default_packages) {
 
   installed_pkgs <- c() # List of packages already installed.
   error_pkgs <- c() # List of packages that were not installed for some reason.

@@ -13,4 +13,3 @@ env(package = NULL)
 \description{
 bash alias for \code{\link[utils]{sessionInfo}}.
 }
-

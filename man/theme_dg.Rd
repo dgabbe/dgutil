@@ -15,4 +15,3 @@ Modifications to \code{theme_bw} to add a bit of color.
 \code{\link[ggplot2]{ggtheme}}
 }
 \keyword{datasets}
-

@@ -4,14 +4,14 @@
 \alias{reinstall_packages}
 \title{Installs your standard set of packages.}
 \usage{
-reinstall_packages(pkgs = my_packages)
+reinstall_packages(pkgs = default_packages)
 }
 \arguments{
 \item{pkgs}{a list of packages to install. Packages installed
 with \code{devtools::install_*} functions are specified as a character
 vector of 2 strings.  The first string is the suffix to complete the install
 funciton name.  The second string is the path to the package.  If this param
-is not specified, the set is defaulted to \code{dgutils::my_packages}.}
+is not specified, the set is defaulted to \code{dgutils::default_packages}.}
 }
 \value{
 TRUE
@@ -32,6 +32,6 @@ and this function to make managing multiple computers eaiser.
 }
 \section{Future Development}{
 
-It's possible that \code{my_packages} will become an option.
+It's possible that \code{default_packages} will become an option.
 }
 

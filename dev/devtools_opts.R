@@ -1,8 +1,9 @@
-#' devtools_opts finds all the devtools options
+#' devtools_opts finds all the devtools options.
 #'
-#' @return
+#' Missing function for devtools. Helps debug whether all the `devtools` are set correctly.
+#'
+#' @return List of all the options.
 #' @export
-#'
 devtools_opts <- function (opts = "devtools.*") {
   all_options <- grep(opts, names(options()), value = TRUE)
   lapply(

@@ -28,7 +28,8 @@ my_packages <- list(
   "shiny",
   "stringr",
   "tidyr",
-  c("github", "dgabbe/wdprompt@Current")
+  c("github", "dgabbe/wdprompt@Current"),
+  "wesanderson"
 )
 
 #' Installs your standard set of packages.

@@ -29,6 +29,7 @@ default_packages <- list(
   "rversions",
   "scales",
   "shiny",
+  "shinyBS",
   "tidyverse", # covers all the Hadley packages
   c("github", "dgabbe/wdprompt@Current")
 )

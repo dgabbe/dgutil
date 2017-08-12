@@ -8,7 +8,8 @@ theme_dg <- theme_bw() +
         panel.grid.major = element_line(size = 0.25, color = "#555555"),
         panel.background = element_blank(),
         plot.title = element_text(face = "bold", vjust = 1),
+        plot.subtitle=element_text(size=12)
 #        axis.text = element_text(size = rel(1.25)),
-        axis.title.x = element_text(size = rel(1.5), vjust = -1),
-        axis.title.y = element_text(size = rel(1.5), vjust = 0)
+#        axis.title.x = element_text(size = rel(1.5), vjust = -1),
+#        axis.title.y = element_text(size = rel(1.5), vjust = 0)
   )

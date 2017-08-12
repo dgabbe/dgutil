@@ -1,6 +1,6 @@
 Package: dgutils
 Title: Interactive and Analysis Script Utility Functions
-Version: 2017.07.31
+Version: 2017.08.12
 Encoding: UTF-8
 Authors@R: person("David", "Gabbé", email = "dgabbe@acm.org", role = c("aut", "cre"))
 Description: Collection of utilities.

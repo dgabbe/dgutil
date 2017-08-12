@@ -31,7 +31,8 @@ default_packages <- list(
   "shiny",
   "shinyBS",
   "tidyverse", # covers all the Hadley packages
-  c("github", "dgabbe/wdprompt@Current")
+  c("github", "dgabbe/wdprompt@Current"),
+  "wesanderson"
 )
 
 #' Installs your standard set of packages.

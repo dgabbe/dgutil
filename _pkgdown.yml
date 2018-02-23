@@ -19,7 +19,4 @@ reference:
       - note
       - reinstall_packages
       - my_packages
-  - title: "Graphics - ggplot"
-    desc: "Helpful graphics functions"
-    contents:
-      - theme_dg
+

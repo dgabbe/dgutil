@@ -7,31 +7,26 @@
 reinstall_packages(pkgs = default_packages)
 }
 \arguments{
-\item{pkgs}{a list of packages to install. Packages installed
-with \code{devtools::install_*} functions are specified as a character
-vector of 2 strings.  The first string is the suffix to complete the install
-funciton name.  The second string is the path to the package.  If this param
-is not specified, the set is defaulted to \code{dgutils::default_packages}.}
+\item{pkgs}{a list of packages to install. Packages installed with
+\code{devtools::install_*} functions are specified as a character vector of
+2 strings.  The first string is the suffix to complete the install funciton
+name.  The second string is the path to the package.  If this param is not
+specified, the set is defaulted to \code{dgutils::default_packages}.}
 }
 \value{
 TRUE
 }
 \description{
 This function is part programming exercise and part solution to R upgrades.
-Only \code{\link{install.packages}() pkgs} param is supported.  For \code{devtools::install_*}
-functions, only the first parameter, usually repo, is supported.  If you need
-something more advanced, there are plenty of similar functions already written.
+Only \code{\link{install.packages}() pkgs} param is supported.  For
+\code{devtools::install_*} functions, only the first parameter, usually repo,
+is supported.  If you need something more advanced, there are plenty of
+similar functions already written.
 }
 \details{
-Each R release has its own library, \code{/Library/Frameworks/R.framework/Versions/x.x/Resources/library}.
-To avoid redoing the package installs into the new R library, I added this entry to \code{.Renviron}:
-\preformatted{
-R_LIBS_USER=~/Library/R/3.x/library/
-}
+Each R release has its own library,
+\code{/Library/Frameworks/R.framework/Versions/x.x/Resources/library}. To
+avoid redoing the package installs into the new R library, I added this entry
+to \code{.Renviron}: \preformatted{ R_LIBS_USER=~/Library/R/3.x/library/ }
 and this function to make managing multiple computers eaiser.
 }
-\section{Future Development}{
-
-It's possible that \code{default_packages} will become an option.
-}
-

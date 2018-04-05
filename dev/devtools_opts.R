@@ -13,7 +13,7 @@ devtools_opts <- function (opts = "devtools.*") {
         lapply(
           names(getOption(o)),
           function(oo) {
-            message("    Option ", o, ".", oo, ":  ", getOption(o)[[oo]])
+            message("    Option ", o, ".", names(getOption(o)[[oo]]), ":  ", names(getOption(o)[[oo]]))
           }
         )
       } else {

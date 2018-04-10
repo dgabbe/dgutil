@@ -19,6 +19,7 @@ default_packages <- list(
   c("github", "dgabbe/dgutils@Current"),
   "directlabels",
   "ggedit", # interactive ggplot editor/explorer
+  "ggimage",
   "knitr",
   c("github", "rstudio/miniUI"),
   c("github", "hadley/pkgdown"),

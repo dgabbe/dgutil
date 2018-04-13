@@ -1,4 +1,4 @@
-#' Modifications to \code{theme_bw} to add a bit of color.
+#' Modifications to \code{theme_bw} to add a bit of color
 #'
 #' @seealso \code{\link[ggplot2]{ggtheme}}
 #' @import ggplot2

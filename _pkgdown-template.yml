@@ -1,0 +1,32 @@
+# From http://pkgdown.r-lib.org/reference/render_page.html:
+# Each page is composed of 4 templates: "head", "header", "content", and "footer".
+# See http://pkgdown.r-lib.org/reference/templates.html for functions to generate
+# sections of this file.
+#
+# _site.yml is used for an Rmarkdown website.
+# _pkgdown.yml is used by pkgdown.
+#
+# References:
+#   http://pkgdown.r-lib.org/articles/pkgdown.html
+#
+
+navbar:
+  left:
+  - text: Intro
+    href: reference/<package-name>.html
+  - text: Reference
+    href: reference/index.html
+reference:
+  - title: "title"
+    desc: "description here"
+    contents:
+      - func1
+      - func2
+      - func3
+  - title: "title here"
+    desc: "description here."
+    contents:
+      - func1
+      - func2
+      - func2
+

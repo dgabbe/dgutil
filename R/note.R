@@ -1,4 +1,4 @@
-#' Add a comment in the history file.
+#' Add a comment in the history file
 #'
 #' Sometimes interactive exploration of running different statements is a
 #' great way to understand what is happening with your code or data.

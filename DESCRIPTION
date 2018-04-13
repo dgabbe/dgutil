@@ -1,14 +1,22 @@
 Package: dgutils
 Title: Interactive and Analysis Script Utility Functions
-Version: 2017.10.11
-Encoding: UTF-8
-Authors@R: person("David", "Gabbé", email = "dgabbe@acm.org", role = c("aut", "cre"))
+Version: 2018.02.01
+Authors@R: 
+    person(given = "David",
+           family = "Gabbé",
+           role = c("aut", "cre"),
+           email = "dgabbe@acm.org")
 Description: Collection of utilities.
-Depends: R (>= 3.2.4)
 License: MIT + file LICENSE
 URL: https://github.com/dgabbe/dgutils
+Depends: 
+    R (>= 3.2.4)
+Imports:
+    devtools,
+    ggplot2 (>= 2.2.0),
+    usethis,
+    utils
+Encoding: UTF-8
 LazyData: TRUE
-RoxygenNote: 6.0.1
 NeedsCompilation: no
-Imports: utils,
-    ggplot2 (>= 2.2.0)
+RoxygenNote: 6.0.1

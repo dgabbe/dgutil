@@ -1,4 +1,4 @@
-#' An indented, wrapped list styled after a definition.
+#' An indented, wrapped list styled after a definition
 #'
 #' @inheritParams fl
 #'

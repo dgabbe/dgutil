@@ -1,13 +1,13 @@
-#' Default set of packages.
+#' Default set of packages to install if not already
 #'
 #' To see a tidy list of them, refer to Examples:
 #'
 #' @section Implementation Enhancements:
 #'
-#' Creating a package object has the disadvantage that updating the defaults necessiates
-#' a package release cycle.  A more flexible method would be to add an option to
-#' \code{.Options}.  In the mean time, writing a brief R script is an alternative
-#' solution.
+#'   Creating a package object has the disadvantage that updating the defaults
+#'   necessiates a package release cycle.  A more flexible method would be to
+#'   add an option to \code{.Options} or creating an environment to store the
+#'   list.  In the mean time, writing a brief R script is a sufficient solution.
 #'
 #' @examples
 #' dgutils::fl(default_packages)
@@ -15,9 +15,13 @@
 #' @export
 default_packages <- list(
   "crayon",
+  "desc",
   c("github", "dgabbe/dgutils@Current"),
   "directlabels",
+  "ggedit", # interactive ggplot editor/explorer
+  "ggimage",
   "knitr",
+  c("github", "rstudio/miniUI"),
   c("github", "hadley/pkgdown"),
   "plotrix",
   "pryr",
@@ -30,38 +34,40 @@ default_packages <- list(
   "scales",
   "shiny",
   "shinyBS",
+  "shinethemes", # consider optional?
+  "testthat",
+  "testthis",
   "tidyverse", # covers all the Hadley packages
+  "usethis",
   c("github", "dgabbe/wdprompt@Current"),
-  "wesanderson"
+  "wesanderson",
+  "xray"
 )
 
-#' Installs your standard set of packages.
+#' Installs your standard set of packages
 #'
 #' This function is part programming exercise and part solution to R upgrades.
-#' Only \code{\link{install.packages}() pkgs} param is supported.  For \code{devtools::install_*}
-#' functions, only the first parameter, usually repo, is supported.  If you need
-#' something more advanced, there are plenty of similar functions already written.
+#' Only \code{\link{install.packages}() pkgs} param is supported.  For
+#' \code{devtools::install_*} functions, only the first parameter, usually repo,
+#' is supported.  If you need something more advanced, there are plenty of
+#' similar functions already written.
 #'
-#' Each R release has its own library, \code{/Library/Frameworks/R.framework/Versions/x.x/Resources/library}.
-#' To avoid redoing the package installs into the new R library, I added this entry to \code{.Renviron}:
-#' \preformatted{
-#' R_LIBS_USER=~/Library/R/3.x/library/
-#' }
+#' Each R release has its own library,
+#' \code{/Library/Frameworks/R.framework/Versions/x.x/Resources/library}. To
+#' avoid redoing the package installs into the new R library, I added this entry
+#' to \code{.Renviron}: \preformatted{ R_LIBS_USER=~/Library/R/3.x/library/ }
 #' and this function to make managing multiple computers eaiser.
 #'
-#' @param pkgs a list of packages to install. Packages installed
-#' with \code{devtools::install_*} functions are specified as a character
-#' vector of 2 strings.  The first string is the suffix to complete the install
-#' funciton name.  The second string is the path to the package.  If this param
-#' is not specified, the set is defaulted to \code{dgutils::default_packages}.
+#' @param pkgs a list of packages to install. Packages installed with
+#'   \code{devtools::install_*} functions are specified as a character vector of
+#'   2 strings.  The first string is the suffix to complete the install funciton
+#'   name.  The second string is the path to the package.  If this param is not
+#'   specified, the set is defaulted to \code{dgutils::default_packages}.
 #'
 #' @return TRUE
 #'
-#' @section Future Development:
-#' It's possible that \code{default_packages} will become an option.
 #' @export
-reinstall_packages <- function (pkgs = default_packages) {
-
+reinstall_packages <- function(pkgs = default_packages) {
   installed_pkgs <- c() # List of packages already installed.
   error_pkgs <- c() # List of packages that were not installed for some reason.
   new_pkgs <- c() # List of packages this function installed.
@@ -72,7 +78,7 @@ reinstall_packages <- function (pkgs = default_packages) {
   #
   installer("devtools")
 
-  lapply(pkgs, function(...){
+  lapply(pkgs, function(...) {
     pkg <- installer(...)
     new_pkgs <<- c(new_pkgs, pkg$new)
     installed_pkgs <<- c(installed_pkgs, pkg$installed)
@@ -80,28 +86,33 @@ reinstall_packages <- function (pkgs = default_packages) {
   })
 
   lapply(
-    c(flp(new_pkgs, label = "Packages installed:  "),
+    c(
+      flp(new_pkgs, label = "Packages installed:  "),
       flp(error_pkgs, label = "Packages NOT installed:  "),
       flp(installed_pkgs, label = "Existing Packages:  ")
-      ),
+    ),
     message
-    )
+  )
   return(TRUE)
 }
 
 
 #' Helper function that invokes the proper install function
 #'
-#' @param p character vector representing package name passed to \code{\link{install.packages}}.
-#' If a list, the first element is the suffix to append to \code{devtools::install_}.
-#' The second element is the path to the path package. Refer to \code{\link[devtools]{install}} for more info.
+#' @param p character vector representing package name passed to
+#'   \code{\link{install.packages}}. If a list, the first element is the suffix
+#'   to append to \code{devtools::install_}. The second element is the path to
+#'   the path package. Refer to \code{\link[devtools]{install}} for more info.
 #'
 #' @section Limitations:
-#' There are many params to the install functions that are not supported at this time.
+#' There are many params to the install functions that are
+#'   not supported at this time.
 #'
 #' @return returns a named list if successful.  Otherwise FALSE.
-#' @keywords internal
 #'
+#' @noRd
+#'
+#' @keywords internal
 installer <- function(p) {
   if (is.null(p)) {
     warning("No package to install.")
@@ -137,7 +148,7 @@ installer <- function(p) {
         {
           eval(
             parse(text = paste(cmd, "(\"", toString(repo), "\", quiet = TRUE)", sep = ""))
-            )
+          )
         },
         silent = TRUE
       )
@@ -149,4 +160,3 @@ installer <- function(p) {
     return(FALSE)
   }
 }
-

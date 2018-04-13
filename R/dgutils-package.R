@@ -1,7 +1,9 @@
-#' Interactive and Analysis Script Utility Functions.
+#' Interactive and Analysis Script Utility Functions
 #'
-#' This package consists of  aliases,
-#' functions, and graphical themes to improve your efficiency and workflow.
+#' This package consists of  aliases and
+#' functions to improve your efficiency and workflow.
+#'
+#' See package [dgplot](https://github.com/dgabbe/dgplot) for plotting related functions.
 #'
 #' @section Installation:
 #' Install this package:
@@ -16,16 +18,6 @@
 #' @section Functions:
 #' Utility/convenience functions are defined in their own R file named
 #' for the function.
-#'
-#' @section Graphical Themes:
-#' This section is graphics programming constructs.
-#' Since R has a number of different packages, there's a separate file for each
-#' one.  Only ggplot is populated.
-#'
-#' @section \emph{graphics-ggplot.R}:
-#' The ggplot2 package is somewhat unique from other packages with heavy use of
-#' the "+" continuation operator and the huge number of objects and functions
-#' needed to generate a graph.
 #'
 #' @docType package
 #' @name dgutils-package

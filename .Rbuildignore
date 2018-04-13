@@ -1,4 +1,5 @@
 ^.*\.Rproj$
+^.nojekyll
 ^\.Rproj\.user$
 ^_untracked\.*
 ^README\.Rmd$

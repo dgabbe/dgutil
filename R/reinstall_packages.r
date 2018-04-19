@@ -14,10 +14,12 @@
 #'
 #' @export
 default_packages <- list(
+  "blogdown",
   "crayon",
   "desc",
   c("github", "dgabbe/dgutils@Current"),
   "directlabels",
+  "formatR",
   "ggedit", # interactive ggplot editor/explorer
   "ggimage",
   "knitr",

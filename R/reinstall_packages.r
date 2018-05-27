@@ -14,6 +14,7 @@
 #'
 #' @export
 default_packages <- list(
+  "addinsList",
   "blogdown",
   "crayon",
   "desc",
@@ -23,6 +24,7 @@ default_packages <- list(
   "ggedit", # interactive ggplot editor/explorer
   "ggimage",
   "knitr",
+  "lintr",
   c("github", "rstudio/miniUI"),
   c("github", "hadley/pkgdown"),
   "plotrix",
@@ -146,13 +148,13 @@ installer <- function(p) {
     if (length(find.package(p_name, quiet = TRUE)) != 0) {
       return(list("installed" = p))
     } else {
-      try(
-        {
-          eval(
-            parse(text = paste(cmd, "(\"", toString(repo), "\", quiet = TRUE)", sep = ""))
-          )
-        },
-        silent = TRUE
+      try({
+        eval(
+          parse(text = paste(cmd, "(\"", toString(repo), "\", quiet = TRUE)",
+                             sep = ""))
+        )
+      },
+      silent = TRUE
       )
     }
   }

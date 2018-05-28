@@ -15,6 +15,7 @@
 #' @export
 default_packages <- list(
   "addinsList",
+  c("github", "RMHogervorst/badgecreatr"),
   "blogdown",
   "crayon",
   "desc",

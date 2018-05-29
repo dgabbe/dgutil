@@ -13,6 +13,8 @@
 #' dgutils::fl(default_packages)
 #'
 #' @export
+#'
+#' Turn this into an option so devtools::check() stops complaining...
 default_packages <- list(
   "blogdown",
   "crayon",

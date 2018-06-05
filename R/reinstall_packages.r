@@ -40,6 +40,7 @@ default_packages <- list(
   "shiny",
   "shinyBS",
   "shinethemes", # consider optional?
+  "styler", # part of tidyverse, but not included in package yet
   "testthat",
   "testthis",
   "tidyverse", # covers all the Hadley packages

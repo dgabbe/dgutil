@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 version <- as.vector(read.dcf('DESCRIPTION')[, 'Version'])
 version <- gsub('-', '.', version)
 ```
-## wdprompt <img src="./images/wdprompt_hexagon.png" align="right" width=125 />
+## {pacakge-name} <img src="./images/{package-name}_hexagon.png" align="right" width=125 />
 <!-- Incorrect alignment from ![wdprompt-hexagon](./images/wdprompt_hexagon.png) -->
 
 [![lifecycle](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://www.tidyverse.org/lifecycle/#stable)
@@ -23,6 +23,10 @@ version <- gsub('-', '.', version)
 <!-- travis badge -->
 <!-- code coverage badge -->
 
+## Overview
+
 Emulate bash prompt behavior in R console by replacing R's default prompt of `>` with the `getwd` string. RStudio does display the current working directory in the Console window title bar, but it is not normally where I look. The global environment can be cleared without affecting the prompt behavior.
+
+## Installation
 
 Complete package documentation is [here](https://blog.frame38.com/wdprompt/reference/wdprompt-package.html).

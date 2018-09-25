@@ -46,6 +46,7 @@ default_packages <- list(
   "testthat",
   "testthis",
   "tidyverse", # covers all the Hadley packages
+  "tufte",
   "usethis",
   c("github", "dgabbe/wdprompt@Current"),
   "wesanderson",
